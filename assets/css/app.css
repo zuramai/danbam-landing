@@ -447,6 +447,10 @@ footer {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 @media screen and (max-width: 996px) {
   .section-map {
     padding: 0;
@@ -461,6 +465,15 @@ footer {
   .section-hero .hero-left {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .about-text {
+    order: 2;
+    text-align: left;
   }
 }
 
