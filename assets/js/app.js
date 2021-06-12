@@ -84,3 +84,21 @@ function moveSliderToRight(e) {
 
     sliderWrapper.setAttribute('data-current-slider',sliderPosition+1)
 }
+
+
+// btn toggle
+let btnToggle = document.querySelector('.btn-toggle button')
+btnToggle.addEventListener('click', function() {
+    let navbarMenu = document.querySelector('.navbar__menu');
+
+    navbarMenu.classList.toggle('show')
+});
+
+// Dropdown
+let dropdowns = document.querySelectorAll('.has-dropdown');
+dropdowns.forEach(dropdownMenu => {
+    dropdownMenu.addEventListener('click', function(e) {
+        let theDropdown = e.target.closest('li').querySelector('.dropdown-menu');
+        theDropdown.classList.toggle('active')
+    });
+});

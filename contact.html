@@ -14,23 +14,45 @@
     <div id="app" class='page-contact'>
         <header>
             <nav id="navbar" class="navbar navbar--main">
-                <ul class="navbar__menu">
-                    <li class="navbar__list">
-                        <a href="index.html" class="navbar__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="menu.html" class="navbar__link">Menu</a>
-                    </li>
-                    <li>
-                        <a href="about-us.html" class="navbar__link">About Us</a>
-                    </li>
-                    <li>
-                        <a href="location.html" class="navbar__link">Location</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="navbar__link">Contact Us</a>
-                    </li>
-                </ul>
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                    </div>
+                    <div class="navbar-right">
+                        <div class="btn-toggle">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                </svg>  
+                            </button>
+                        </div>
+                        <ul class="navbar__menu">
+                            <li class="navbar__list">
+                                <a href="index.html" class="navbar__link">Home</a>
+                            </li>
+                            <li class='has-dropdown'>
+                                <a href="#" class="navbar__link">Menu</a>
+                                <ul class="dropdown-menu">
+                                    <li class='dropdown-item'>
+                                        <a href="menu.html">Special Menu</a>
+                                    </li>
+                                    <li class='dropdown-item'>
+                                        <a href="menu.html">New Menu</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-us.html" class="navbar__link">About Us</a>
+                            </li>
+                            <li>
+                                <a href="location.html" class="navbar__link">Location</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="navbar__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
            

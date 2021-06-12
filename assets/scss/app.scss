@@ -4,6 +4,45 @@
 
 .navbar {
     width: 100%;
+    position: relative;
+    .logo img {
+        height: 50px;
+    }
+    & > .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dropdown-menu {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        min-width: 200px;
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: .5rem;
+        z-index: 3;
+        a {
+            color: #444;
+            padding: .5rem .3rem;
+            display: block;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    .btn-toggle {
+        display: none;
+        button {
+            padding: 1rem;
+            border: none;
+            color: black;
+            cursor: pointer;
+            border-radius: .5rem;
+            background-color: #ddd;
+        }
+    }
     padding: 2rem; 
 
     .navbar__menu {
@@ -11,6 +50,63 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
+        li {
+            position: relative;
+            &:hover {
+                .dropdown-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .btn-toggle {
+            display: block;
+            float: right;
+        }
+        .navbar__menu {
+            position: absolute;
+            top: 100%;
+            z-index: 100;
+            display: none;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 1rem;
+            background-color: $primary;
+            flex-direction: column;
+            gap: 0;
+            &.show {
+                display: block;
+            }
+            a {
+                padding: 1rem;
+                transition: all .2s;
+                display: block;
+                color: white;
+                &:hover {
+                    transform: translateX(10px);
+                }
+            }
+        }
+        .dropdown-menu  {
+            display: block;
+            background-color: transparent;
+            position: initial;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            a {
+                padding-left: 3rem;
+            }
+            a:hover {
+                color: white;
+            }
+            &.active {
+                max-height: 100px;
+            }
+        }
     }
 }
 .section {
