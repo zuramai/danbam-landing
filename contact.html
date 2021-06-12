@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - DanBam</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+    <div id="app" class='page-contact'>
+        <header>
+            <nav id="navbar" class="navbar navbar--main">
+                <ul class="navbar__menu">
+                    <li class="navbar__list">
+                        <a href="index.html" class="navbar__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="menu.html" class="navbar__link">Menu</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html" class="navbar__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="location.html" class="navbar__link">Location</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar__link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+           
+        <section class="section section-location">
+            <div class="section-header center">
+                <h1>Contact Us</h1>
+                <p>Feel free to contact us if you have a question or problem.</p>
+            </div>
+            <div class="section-body">
+                <div class="container">
+                    <form class="form-wrapper" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" class='form-control'>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Email</label>
+                            <input type="email" name="name" id="email" placeholder="John Doe" class='form-control'>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div class="form-check">
+                                <input type="radio" name="gender" id="L">
+                                <label for="L">Laki-laki</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="gender" id="P">
+                                <label for="L">Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="branch">Branch Location</label>
+                            <select name="branch" id="branch" class="form-control">
+                                <option value="">Choose branch</option>
+                                <option value="DanBam 1">DanBam 1</option>
+                                <option value="DanBam 2">DanBam 2</option>
+                                <option value="DanBam 3">DanBam 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class='btn btn-primary'>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+           
+        
+        <footer>
+            <p>Copyright &copy; 2021 DanBam Created by <a href="https://ahmadsaugi.com">Ahmad Saugi</a></p>
+        </footer>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>

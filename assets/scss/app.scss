@@ -170,6 +170,28 @@ footer {
     margin-bottom: 2rem;
 }
 
+.form-wrapper {
+    width: min(100%, 600px);
+    padding: 1rem;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1rem;
+    .form-control {
+        width: 100%;
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid #ddc;
+        font-size: 1rem;
+        transition: all .2s;
+
+        &:focus {
+            border: 1px solid $primary;
+            box-shadow: 2px 2px 10px rgba($primary,.2);
+            outline: none;
+        }
+    }
+}
 @media screen and (max-width: 996px) {
     .section-map {
         padding: 0;
