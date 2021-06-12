@@ -17,7 +17,7 @@
     padding: 3rem;
     .section-header {
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         &.center {
             text-align: center;
@@ -74,6 +74,20 @@
         }
     }
 }
+.section-map {
+    .section-body {
+        padding: 3rem;
+        td {
+            padding: 1rem;
+        }
+    }
+    .map-name {
+        padding: 0 1rem;
+    }
+    .map-value {
+        font-size: 1.2rem;
+    }
+}
 a.btn {
     display: inline-block;
 }
@@ -96,6 +110,7 @@ a.btn {
 .foods {
     padding: 5rem 0;  
     .food {
+        margin-bottom: 3rem;
         img {
             width: 100%;
             height: 400px;
@@ -123,4 +138,28 @@ a.btn {
             font-size: .925rem;
         }
     }
+}
+
+footer {
+    padding: 1rem;
+    border-top: 1px solid rgba($color: darken($primary,10%), $alpha:.2);
+    text-align: center;
+}
+
+@media screen and (max-width: 996px) {
+    .section-map {
+        padding: 0;
+        iframe {
+            width: 100%;
+        }
+    }
+    .section-hero {
+        height: auto;
+        .hero-left {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+
 }
