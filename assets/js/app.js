@@ -1,6 +1,7 @@
 let contactForm = document.getElementById("contact-form");
 
-contactForm.addEventListener('submit', function(e) {
+// if contact form exist then add event
+if(contactForm) contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     let errors = [];
 
@@ -29,7 +30,6 @@ contactForm.addEventListener('submit', function(e) {
         
     }
     
-
     validate("name", name.value);
     validate("email", email.value);
     validate("branch", branch.value);
@@ -42,7 +42,45 @@ contactForm.addEventListener('submit', function(e) {
     showErrors(errors)
 });
 
+
 function showErrors(errors) {
     if(!errors.length) return alert("Success");
     return alert(errors.join("\n"));
+}
+
+let sliderControlLeft = document.querySelector('.slider-control-left');
+let sliderControlRight = document.querySelector('.slider-control-right');
+let sliderWrapper = document.querySelector('.slider-wrapper');
+let sliders = document.querySelectorAll('.slider');
+
+// if in page menu, add event listener to slider
+if(document.querySelector('.page-menu')) {
+    sliderControlLeft.addEventListener('click', moveSliderToLeft);
+    sliderControlRight.addEventListener('click', moveSliderToRight);
+}
+
+function moveSliderToLeft(e) {
+    let sliderPosition = parseInt(sliderWrapper.getAttribute('data-current-slider'));
+
+    // can't slide to left if you are in the first
+    if(sliderPosition == 1) return;
+
+    let nextSlide = sliderPosition - 2;
+    let nextSlidePercent = nextSlide * -100;
+    sliders.forEach(s => s.style.transform = `translateX(${nextSlidePercent}%)`)
+
+    // update attribute
+    sliderWrapper.setAttribute('data-current-slider',sliderPosition-1)
+}
+
+function moveSliderToRight(e) {
+    let sliderPosition = parseInt(sliderWrapper.getAttribute('data-current-slider'));
+
+    // can't slide to right if you are in the last slide
+    if(sliderPosition == sliders.length) return;
+
+    let nextSlidePercent = sliderPosition * -100;
+    sliders.forEach(s => s.style.transform = `translateX(${nextSlidePercent}%)`)
+
+    sliderWrapper.setAttribute('data-current-slider',sliderPosition+1)
 }
